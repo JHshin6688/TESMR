@@ -1,0 +1,13 @@
+embedding_size: 64
+feat_embed_dim: 64
+is_multimodal_model: False
+n_layers: [1, 2, 3]
+reg_weight: 1e-02
+learning_rate: [0.001, 1e-04, 1e-05]
+dropout_rate: [0.1, 0.2, 0.3]
+graph_dropout: True
+user_temperature: [0.075, 0.1]
+item_temperature: [0.075, 0.1]
+#user_weight: [1e-03, 1e-04, 1e-05]
+#item_weight: [1e-03, 1e-04, 1e-05]
+hyper_parameters: ["n_layers", "learning_rate", "dropout_rate"]

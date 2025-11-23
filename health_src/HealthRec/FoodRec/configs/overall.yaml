@@ -1,0 +1,59 @@
+# general
+gpu_id: 0
+use_gpu: True
+seed: [999]
+
+data_path: '../../../data/jeehoshin/'
+log_root: './log/'
+ckp_root: './ckp/'
+is_multimodal_model: True
+
+checkpoint_dir: 'saved'
+#save_recommended_topk: True
+save_recommended_topk: False
+recommend_topk: 'recommend_topk/'
+
+embedding_size: 64
+weight_decay: 0.0
+req_training: True
+#embedding_size: 3780
+
+# training settings
+epochs: 1000
+stopping_step: 20
+#train_batch_size: 512
+train_batch_size: 2048
+learner: adam
+learning_rate: 0.001
+learning_rate_scheduler: [1.0, 50]
+eval_step: 1
+
+
+# evaluation settings
+#metrics: ["Recall", "NDCG", "Precision", "MAP"]
+metrics: ["Recall", "NDCG"]
+topk: [10, 20]
+valid_metric: Recall@20
+eval_batch_size: 4096
+eval_by_user: False
+full_sort: False
+#neg_sample_num: 500
+
+end2end: False
+SCHGN_ssl: False
+
+load_UserRecipe_graph: False
+load_RecipeRecipe_graph: False
+load_RecipeIngre_graph: False
+load_IngreIngre_graph: False
+load_RecipeCalories_graph: False
+load_RecipeHealth_graph: False
+use_cal_level: False
+use_health_level: False
+load_RecipeRecipeCo_graph: False
+load_RecipeRecipeIng_graph: False
+graph_inference_fast: False
+small_ingre: False
+
+# iteration parameters
+hyper_parameters: ["seed"]
